@@ -12,7 +12,9 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 connectDB();
-
+app.get('/health-Check', (req, res) => (
+    res.json({ message: 'working', status: 200 })
+),)
 app.use("/api/auth", authRoutes);
 app.use("/api/habit", authGuard, habitRoutes)
 

@@ -19,6 +19,4 @@ const PORT = 5000
 app.listen(PORT, '0.0.0.0', () => {
     const ip = getLocalIp();
     console.log('Server is running!');
-    console.log(`Local:     http://localhost:${PORT}`);
-    console.log(`On Phone:  http://${ip}:${PORT}  ← USE THIS IN YOUR APP`);
 });
